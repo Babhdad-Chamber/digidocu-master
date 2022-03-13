@@ -8,7 +8,7 @@
                 <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"
                    href="{!! route('tags.create') !!}">
                     <i class="fa fa-plus"></i>
-                    Add New
+                    اضافة قسم
                 </a>
             @endcan
         </h1>

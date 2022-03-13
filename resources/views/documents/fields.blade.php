@@ -50,7 +50,7 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    {!! Form::submit('Save & Upload', ['class' => 'btn btn-primary','name'=>'savnup']) !!}
-    <a href="{!! route('documents.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('حفظ', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('حفظ و ارسل', ['class' => 'btn btn-primary','name'=>'savnup']) !!}
+    <a href="{!! route('documents.index') !!}" class="btn btn-default">الغاء</a>
 </div>
