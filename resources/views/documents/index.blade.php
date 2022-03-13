@@ -71,7 +71,7 @@
                 <a href="{{route('documents.create')}}"
                    class="btn btn-primary">
                     <i class="fa fa-plus"></i>
-                    Add New
+                    اضافة جديد
                 </a>
             @endcan
         </h1>
@@ -86,18 +86,18 @@
             <div class="box-header">
                 <div class="form-group hidden visible-xs">
                     <button type="button" class="btn btn-default btn-block" data-toggle="collapse"
-                            data-target="#filterForm"><i class="fa fa-filter"></i> Filter
+                            data-target="#filterForm"><i class="fa fa-filter"></i> فلتر
                     </button>
                 </div>
                 {!! Form::model(request()->all(), ['method'=>'get','class'=>'form-inline visible hidden-xs','id'=>'filterForm']) !!}
                 <div class="form-group">
-                    <label for="search" class="sr-only">Search</label>
-                    {!! Form::text('search',null,['class'=>'form-control input-sm','placeholder'=>'Search...']) !!}
+                    <label for="search" class="sr-only">بحث</label>
+                    {!! Form::text('search',null,['class'=>'form-control input-sm','placeholder'=>'بحث...']) !!}
                 </div>
                 <div class="form-group">
-                    <label for="tags" class="sr-only">{{config('settings.tags_label_singular')}}:</label>
+                    <label for="tags" class="sr-only">القسم:</label>
                     <select class="form-control select2 input-sm" name="tags[]" id="tags"
-                            data-placeholder="Choose {{config('settings.tags_label_singular')}}" multiple>
+                            data-placeholder="اختر {{config('settings.tags_label_singular')}}" multiple>
                         @foreach($tags as $tag)
                             @canany(['read documents','read documents in tag '.$tag->id])
                                 <option
@@ -110,7 +110,7 @@
                     <label for="status" class="sr-only">{{config('settings.tags_label_singular')}}:</label>
                     {!! Form::select('status',['0'=>"ALL",config('constants.STATUS.PENDING')=>config('constants.STATUS.PENDING'),config('constants.STATUS.APPROVED')=>config('constants.STATUS.APPROVED'),config('constants.STATUS.REJECT')=>config('constants.STATUS.REJECT')],null,['class'=>'form-control input-sm']) !!}
                 </div>
-                <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-filter"></i> Filter</button>
+                <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-filter"></i> فلتر</button>
                 {!! Form::close() !!}
             </div>
             <div class="box-body">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login | {{config('settings.system_title')}}</title>
+    <title>تسجيل الدخول </title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -27,29 +27,33 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .login-box-body{
+        .login-box-body {
             border: 1px solid rgba(0, 40, 100, 0.12) !important;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05) !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05) !important;
             border-radius: 3px;
         }
     </style>
+
+    <link rel="stylesheet" href="{{asset('css/rtl.css')}}">
+
 
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ route('home') }}"><b>{{config('settings.system_title')}} </b></a>
+        <a href="{{ route('home') }}"><b>تسجيل الدخول</b></a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">قم بكتابة اسم المستخدم وكلمة المرور</p>
 
         <form method="post" action="{{ url('/login') }}">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('username') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username">
+                <input type="text" class="form-control" name="username" value="{{ old('username') }}"
+                       placeholder="اسم المستخدم او البريد الالكتروني">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 @if ($errors->has('username'))
                     <span class="help-block">
@@ -59,7 +63,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="كلمة المرور" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 @if ($errors->has('password'))
                     <span class="help-block">
@@ -72,19 +76,19 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> تذكرني
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">تسجيل الدخول</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+        <a href="{{ url('/password/reset') }}">حل نسيت كلمة المرور؟</a><br>
         {{--<a href="{{ url('/register') }}" class="text-center">Register a new membership</a>--}}
 
     </div>

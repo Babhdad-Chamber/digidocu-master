@@ -5,17 +5,23 @@
     <title>@yield('title') | {{config('settings.system_title')}}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset("css/bootstrap-rtl.min.css")}}">
     <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
     <link rel="stylesheet" href="{{asset('css/lte/AdminLTE.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/lte/skins/skin-blue-light.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" href="{{asset('vendor/bootstrap-wysihtml5/css/bootstrap3-wysihtml5.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/bootstrap-tagsinput/css/bootstrap-tagsinput.css')}}">
     <link rel="stylesheet" href="{{asset('css/digidocu-custom.css')}}">
+
+
     @yield('css')
+
+    <link rel="stylesheet" href="{{asset('css/rtl.css')}}">
+
 </head>
 
 <body class="skin-blue-light sidebar-mini">
@@ -26,8 +32,8 @@
 
             <!-- Logo -->
             <a href="{{route('admin.dashboard')}}" class="hidden-xs logo">
-                <span class="logo-mini"><b>{{config('settings.system_title')[0]}}</b></span>
-                <span class="logo-lg"><b>{{config('settings.system_title')}}</b></span>
+                <span class="logo-mini"><b>نظام الارشفة الالكتروني</b></span>
+                <span class="logo-lg"><b>نظام الارشفة الالكتروني</b></span>
             </a>
 
             <!-- Header Navbar -->
@@ -37,7 +43,9 @@
                     <span class="sr-only">Toggle navigation</span>
                 </a>
 
-                <span style="display: inline-block;width: 71vw;text-align: center;font-size: 20px;line-height: 50px;color: white;" class="visible-xs-inline-block">
+                <span
+                    style="display: inline-block;width: 71vw;text-align: center;font-size: 20px;line-height: 50px;color: white;"
+                    class="visible-xs-inline-block">
                     <b>{{config('settings.system_title')}}</b>
                 </span>
                 <!-- Navbar Right Menu -->
