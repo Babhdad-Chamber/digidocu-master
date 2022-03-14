@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title') | {{config('settings.system_title')}}</title>
+    <link rel="icon" href="{{asset("favicon.png")}}">
+
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset("css/bootstrap-rtl.min.css")}}">
@@ -21,6 +23,7 @@
     @yield('css')
 
     <link rel="stylesheet" href="{{asset('css/rtl.css')}}">
+
 
 </head>
 
